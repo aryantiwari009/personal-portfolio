@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
       description: "A beautifully streamlined and optimized single-page web environment developed to catalog professional technical milestones, personal computing stack qualifications, and continuous delivery systems engineering history interactively.",
       features: ["Dynamic client-side pagination structures", "Intersection Observer navigation sync mechanisms", "Fluid viewport orientation auto-scaling matrices"],
       links: [
-        { label: "Live Demo", url: "https://example.com/portfolio", icon: "fa-solid fa-globe" },
-        { label: "GitHub Repo", url: "https://github.com", icon: "fa-brands fa-github" }
+        { label: "Live Demo", url: "https://aryan-tiwari.vercel.app/", icon: "fa-solid fa-globe" },
+        { label: "GitHub Repo", url: "https://github.com/aryantiwari009/personal-portfolio", icon: "fa-brands fa-github" }
       ]
     },
     scraper: {
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
       features: ["Asynchronous multi-thread request throttling and proxy rotation mechanics", "Robust raw DOM serialization with precise custom JSON layout parsing rules", "Integrated rate-limiting failsafes and automated query exception handlers"],
       links: [
         { label: "Live Preview", url: "#", icon: "fa-solid fa-bolt" },
-        { label: "GitHub Source", url: "https://github.com", icon: "fa-brands fa-github" }
+        { label: "GitHub Source", url: "https://github.com/aryantiwari009/Devflow", icon: "fa-brands fa-github" }
       ]
     },
     devflow: {
