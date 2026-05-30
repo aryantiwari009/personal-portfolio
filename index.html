@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aryan Tiwari | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Cabinet+Grotesk:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandBg: "#FDFBF7",
+              brandDark: "#0A192F",
+              brandYellow: "#FFC000",
+              brandYellowHover: "#E6A100",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-brandBg text-brandDark antialiased font-sans">
+    <header
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="text-2xl font-black tracking-tight font-heading uppercase">
+          Aryan<span class="text-brandYellow">Tiwari</span>.
+        </div>
+        <nav
+          id="desktop-nav"
+          class="hidden md:flex items-center space-x-1 font-semibold text-xs tracking-wider uppercase relative bg-gray-200/60 p-1 rounded-full border border-gray-200"
+        >
+          <div
+            id="nav-indicator"
+            style="
+              position: absolute;
+              top: 4px;
+              bottom: 4px;
+              left: 4px;
+              width: 0px;
+              transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            "
+            class="bg-brandYellow rounded-full z-0"
+          ></div>
+          <a
+            href="#home"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-brandDark transition duration-200 select-none cursor-pointer"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-gray-600 hover:text-brandDark transition duration-200 select-none cursor-pointer"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-gray-600 hover:text-brandDark transition duration-200 select-none cursor-pointer"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-gray-600 hover:text-brandDark transition duration-200 select-none cursor-pointer"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-gray-600 hover:text-brandDark transition duration-200 select-none cursor-pointer"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="nav-item relative z-10 px-4 py-2 rounded-full text-gray-600 hover:text-brandDark transition duration-200 select-none cursor-pointer"
+            >Contact</a
+          >
+        </nav>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-2xl focus:outline-none" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 font-semibold uppercase text-xs tracking-wider"
+      >
+        <a href="#home" class="block text-brandYellow">Home</a>
+        <a href="#about" class="block hover:text-brandYellow">About Me</a>
+        <a href="#skills" class="block hover:text-brandYellow">Skills</a>
+        <a href="#projects" class="block hover:text-brandYellow">Projects</a>
+        <a href="#experience" class="block hover:text-brandYellow"
+          >Experience</a
+        >
+        <a href="#contact" class="block hover:text-brandYellow">Contact</a>
+      </div>
+    </header>
+
+    <section
+      id="home"
+      class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-white"
+    >
+      <div
+        class="hidden lg:block absolute right-0 top-0 bottom-0 w-7/12 bg-brandBg hero-clip z-0"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 py-12 px-6"
+      >
+        <div class="absolute inset-0 lg:relative lg:inset-auto lg:col-span-5 flex justify-center items-center lg:items-end h-full z-0 lg:z-10 opacity-20 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
+          <div class="w-full max-w-sm sm:max-w-md lg:max-w-none h-[80%] sm:h-[90%] lg:h-[540px] relative flex items-center justify-center">
+            
+            <div class="absolute w-72 h-72 sm:w-96 sm:h-96 lg:w-[460px] lg:h-[460px] bg-gradient-to-tr from-brandYellow/40 via-amber-400/20 to-transparent rounded-[50%_40%_30%_70%_/_50%_60%_30%_60%] filter blur-2xl opacity-50 animate-pulse z-0"></div>
+            
+            <div style="animation: morphBlob 12s ease-in-out infinite alternate, spin 20s linear infinite;" 
+                 class="absolute w-[290px] h-[290px] sm:w-[375px] sm:h-[375px] lg:w-[465px] lg:h-[465px] bg-gradient-to-bl from-brandYellowHover/30 via-orange-400/20 to-transparent filter blur-md z-0"></div>
+            
+            <div style="animation: morphBlob 8s ease-in-out infinite alternate;" 
+                 class="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[450px] lg:h-[450px] bg-white shadow-2xl border-[6px] border-white overflow-hidden z-10 flex items-end justify-center">
+              <img src="assets/personal.png" alt="Aryan Tiwari" class="w-full h-full object-cover object-top scale-110 transition-transform duration-500 hover:scale-115 filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+            </div>
+          </div>
+        </div>
+
+        <style>
+          @keyframes morphBlob {
+            0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+            33% { border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%; }
+            66% { border-radius: 50% 50% 30% 70% / 40% 60% 40% 60%; }
+            100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+          }
+        </style>
+
+        <div
+          class="col-span-1 lg:col-span-7 space-y-6 text-center lg:text-left lg:pl-12 relative z-10 w-full mx-auto"
+        >
+          <h5
+            class="text-brandYellow font-bold text-lg uppercase tracking-widest font-heading"
+          >
+            Hi There, I'm
+          </h5>
+          <h1
+            class="text-5xl md:text-6xl xl:text-7xl font-black tracking-tight text-brandDark leading-none font-heading uppercase"
+          >
+            Aryan Tiwari
+          </h1>
+          <div
+            class="text-lg md:text-xl font-medium text-gray-700 min-h-[40px] flex items-center justify-center lg:justify-start tracking-wide font-sans"
+          >
+            <span
+              id="typewriter"
+              class="border-r-4 border-brandYellow pr-1 animate-pulse"
+            ></span>
+          </div>
+          <div
+            class="flex items-center justify-center lg:justify-start gap-3 pt-2"
+          >
+            <a href="https://github.com/aryantiwari009" class="social-icon scroll-reveal delay-100"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/aryan-tiwari-446158383/" class="social-icon scroll-reveal delay-200"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <div class="pt-4">
+            <a
+              href="#contact"
+              class="inline-block bg-brandYellow hover:bg-brandYellowHover text-brandDark font-bold tracking-wider uppercase text-xs px-8 py-4 rounded-full shadow-md transform hover:-translate-y-0.5 transition duration-200 font-heading"
+            >
+              Pick a Time That Works for You 😎
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 max-w-7xl mx-auto relative overflow-visible">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative overflow-visible">
+        
+        <div
+          class="col-span-1 lg:col-span-7 space-y-6 text-center lg:text-left scroll-reveal"
+        >
+          <h2
+            class="text-4xl md:text-5xl font-black tracking-tight font-heading uppercase leading-none text-brandDark"
+          >
+            With every line of code, I make the world a little better !
+          </h2>
+          <p class="text-gray-600 leading-relaxed text-base font-sans">
+            For me, programming isn't just a job — it's a way to build, learn,
+            and make digital experiences better. I am currently honing my skill
+            sets focusing heavily on core web infrastructure stacks and advanced
+            computational models. I love finding creative solutions that make
+            things simpler and more meaningful for people.
+          </p>
+        </div>
+
+        <div class="hidden lg:flex col-span-1 lg:col-span-5 items-center justify-center overflow-visible select-none group w-full">
+          <div class="relative w-full max-w-[420px] aspect-[7/8] flex items-center justify-center overflow-visible">
+            
+            <div class="absolute w-4/5 h-4/5 bg-brandYellow/25 rounded-full filter blur-3xl opacity-80 group-hover:scale-115 transition-all duration-500 mix-blend-color-dodge z-0"></div>
+            <div class="absolute w-2/3 h-2/3 bg-white rounded-full filter blur-xl opacity-90 group-hover:scale-110 transition-all duration-500 z-0"></div>
+            
+            <img src="assets/Pointing_image_1.png" alt="Clean Minimalist Pointer Accent" 
+                 class="relative z-10 w-full h-full object-contain filter brightness-[1.12] contrast-[1.05] drop-shadow-[0_25px_35px_rgba(255,192,0,0.2)] transform transition-transform duration-500 ease-out scale-100 group-hover:scale-105 group-hover:rotate-[-2deg]">
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="bg-brandYellow text-brandDark py-12 px-6 shadow-inner scroll-reveal"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <h2
+          class="text-3xl md:text-4xl font-black tracking-tight text-center md:text-left font-heading uppercase leading-none text-brandDark"
+        >
+          I build with passion, wherever I am ! 🚀
+        </h2>
+        <a
+          href="#contact"
+          class="bg-brandDark hover:bg-brandDark/90 text-brandYellow hover:text-white font-bold px-10 py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 tracking-widest font-heading uppercase text-xs"
+        >
+          Hire Me Now
+        </a>
+      </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-12 text-center lg:text-left"
+      >
+        <div class="col-span-1 lg:col-span-7 space-y-6 scroll-reveal">
+          <h2
+            class="text-4xl font-black tracking-tight font-heading uppercase text-brandDark"
+          >
+            Skills
+          </h2>
+          <p class="text-gray-600 text-base font-sans">
+            Here's a look at my skill set. The tech world changes every moment
+            and that's what makes it exciting!
+          </p>
+          <div
+            class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2"
+          >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-100 flex items-center gap-2"
+              ><i class="fa-brands fa-react text-brandDark"></i> React</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-150 flex items-center gap-2"
+              ><i class="fa-solid fa-n text-brandDark"></i> Next.js</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-200 flex items-center gap-2"
+              ><i class="fa-solid fa-code text-brandDark"></i> TypeScript</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-250 flex items-center gap-2"
+              ><i class="fa-brands fa-css3-alt text-brandDark"></i> Tailwind
+              CSS</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-300 flex items-center gap-2"
+              ><i class="fa-solid fa-terminal text-brandDark"></i> C++</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-350 flex items-center gap-2"
+              ><i class="fa-solid fa-sitemap text-brandDark"></i> Data
+              Structures & Algorithms</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-400 flex items-center gap-2"
+              ><i class="fa-brands fa-node-js text-brandDark"></i> Node.js</span
+            >
+            <span
+              class="skill-badge font-sans scroll-reveal delay-450 flex items-center gap-2"
+              ><i class="fa-brands fa-git-alt text-brandDark"></i> Git</span
+            >
+          </div>
+        </div>
+        <div class="col-span-1 lg:col-span-5 space-y-6 scroll-reveal delay-200">
+          <h2
+            class="text-4xl font-black tracking-tight font-heading uppercase text-brandDark"
+          >
+            Language skill
+          </h2>
+          <p class="text-gray-600 text-base font-sans">
+            One of my biggest interests is learning new languages.
+          </p>
+          <div class="space-y-4 pt-2 max-w-md mx-auto lg:mx-0">
+            <div class="lang-row scroll-reveal delay-100">
+              <span
+                class="font-bold text-md tracking-wide font-sans flex items-center gap-2"
+                ><i class="fa-solid fa-language text-gray-400"></i>
+                English</span
+              >
+              <div class="lang-circle font-heading font-black">70%</div>
+            </div>
+            <div class="lang-row scroll-reveal delay-200">
+              <span
+                class="font-bold text-md tracking-wide font-sans flex items-center gap-2"
+                ><i class="fa-solid fa-comments text-gray-400"></i> Hindi</span
+              >
+              <div class="lang-circle font-heading font-black">99%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- PROJECTS DISPLAY GRIDS -->
+    <section id="projects" class="py-20 px-6 bg-brandBg">
+      <div class="max-w-3xl lg:max-w-7xl mx-auto space-y-12">
+        <div class="text-center max-w-2xl mx-auto space-y-4 scroll-reveal">
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight font-heading uppercase text-brandDark">What have I created?</h2>
+          <p class="text-gray-600 font-sans">Creating isn't just part of my work, it's part of my life.</p>
+        </div>
+        
+        <!-- DYNAMIC ALIGNMENT MATRICES: Uniformly spreads exactly 3 cards across the same line on desktop layout streams -->
+        <div id="projects-grid" data-paginate-container class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center justify-center items-stretch w-full mx-auto">
+          
+          <!-- Project 1: Personal Portfolio -->
+          <div class="project-card scroll-reveal delay-100 relative overflow-hidden w-full flex flex-col justify-between">
+            <div>
+              <div class="project-icon-box"><i class="fa-solid fa-image-portrait text-brandDark"></i></div>
+              <h3 class="text-xl font-bold tracking-tight mb-3 font-heading uppercase text-brandDark">Personal Portfolio</h3>
+              <p class="text-gray-500 leading-relaxed mb-6 text-sm font-sans">Showcasing My Journey in Full-Stack Development, Problem Solving, and Continuous Learning.</p>
+            </div>
+            <button data-project-id="portfolio" class="project-btn w-full text-center font-heading uppercase tracking-wider text-xs py-3 block bg-transparent hover:bg-brandDark/5 transition-colors rounded-xl mt-auto" type="button">Read More</button>
+          </div>
+          
+          <!-- Project 3: DevFlow (With 'In Making' Badge Banner) -->
+          <div class="project-card scroll-reveal delay-300 relative overflow-hidden border-2 border-amber-500/20 shadow-sm w-full flex flex-col justify-between">
+            <!-- ABSOLUTE LEFT CORNER BANNER TAG -->
+            <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 bg-amber-500 text-white text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-md shadow-sm select-none z-20 animate-pulse">
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span> In Making
+            </div>
+            <div>
+              <div class="project-icon-box mt-4"><i class="fa-solid fa-layer-group text-brandDark"></i></div>
+              <h3 class="text-xl font-bold tracking-tight mb-3 font-heading uppercase text-brandDark">DevFlow</h3>
+              <p class="text-gray-500 leading-relaxed mb-6 text-sm font-sans">Platform for Collaborative Learning and Technical Discussions.</p>
+            </div>
+            <button data-project-id="devflow" class="project-btn w-full text-center font-heading uppercase tracking-wider text-xs py-3 block bg-transparent hover:bg-brandDark/5 transition-colors rounded-xl mt-auto" type="button">Read More</button>
+          </div>
+
+          <!-- Project 4: Future Project Placeholder (Hidden behind pagination engine automatically) -->
+          <div class="project-card w-full flex flex-col justify-between">
+            <div>
+              <div class="project-icon-box"><i class="fa-solid fa-rocket text-brandDark"></i></div>
+              <h3 class="text-xl font-bold tracking-tight mb-3 font-heading uppercase text-brandDark">Upcoming Innovation</h3>
+              <p class="text-gray-500 leading-relaxed mb-6 text-sm font-sans">A next-generation full-stack architecture currently under system design parameters.</p>
+            </div>
+            <button class="w-full text-center font-heading uppercase tracking-wider text-xs py-3 block bg-transparent text-gray-400 cursor-not-allowed rounded-xl mt-auto" type="button" disabled>Coming Soon</button>
+          </div>
+          
+        </div>
+
+        <!-- PROJECTS TRIGGER BUTTON: The engine unhides this row automatically when content entries exceed maxVisible values -->
+        <div id="projects-trigger-box" class="hidden text-center justify-center pt-6 w-full">
+          <button id="btn-load-projects" class="w-auto inline-flex items-center justify-center bg-white hover:bg-brandDark hover:text-white text-brandDark font-bold tracking-widest uppercase text-xs px-10 py-4 rounded-xl border-2 border-brandDark shadow-sm transition duration-300 font-heading" type="button">
+            Read More Projects <i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300 pointer-events-none">
+      <div id="modal-backdrop" class="absolute inset-0 bg-brandDark/40 backdrop-blur-md"></div>
+      
+      <div class="relative bg-white w-full max-w-2xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto rounded-3xl shadow-2xl border-2 border-brandDark z-10 transform scale-95 transition-transform duration-300 p-6 sm:p-8 space-y-6">
+        <button id="modal-close-btn" title="Close Project Details" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-brandDark text-2xl transition-colors p-2 bg-white rounded-full shadow-sm sm:shadow-none focus:outline-none z-50" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div id="modal-icon" class="w-14 h-14 bg-brandBg rounded-2xl flex items-center justify-center text-2xl border border-gray-200"></div>
+        
+        <div class="space-y-2">
+          <h3 id="modal-title" class="text-2xl sm:text-3xl font-black font-heading uppercase text-brandDark pr-8">Project Title Placeholder</h3>
+          <div id="modal-tags" class="flex flex-wrap gap-2 pt-1"></div>
+        </div>
+        
+        <hr class="border-gray-100" />
+        
+        <div class="space-y-4">
+          <h4 class="font-heading uppercase font-bold text-xs tracking-widest text-gray-400">Overview & Deep-Dive Description</h4>
+          <p id="modal-description" class="text-gray-600 text-sm leading-relaxed font-sans">Detailed text description fallback element placeholder row frame body text asset.</p>
+        </div>
+
+        <div id="modal-features-section" class="space-y-3 hidden">
+          <h4 class="font-heading uppercase font-bold text-xs tracking-widest text-gray-400">Key Features</h4>
+          <ul id="modal-features" class="list-disc list-inside text-gray-600 text-sm space-y-1.5 font-sans"></ul>
+        </div>
+      </div>
+    </div>
+
+<!-- EXPERIENCE SECTION -->
+<!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 px-6 max-w-7xl mx-auto space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-4 scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight font-heading uppercase text-brandDark">My Experience</h2>
+        <p class="text-gray-600 font-sans">The foundation is laid, the code runs clean, and the next chapter is ready to be written.</p>
+      </div>
+
+      <!-- CENTERED INTERESTING SINGLE-CARD TIMELINE FRAME -->
+      <div class="max-w-2xl mx-auto relative">
+        
+        <!-- Subtle Timeline Vertical Connector Line -->
+        <div class="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brandYellow to-brandBg"></div>
+
+        <!-- Card Container -->
+        <div class="relative flex gap-6 items-start scroll-reveal p-6 sm:p-8 bg-white rounded-3xl border-2 border-brandDark shadow-[4px_4px_0px_0px_#0A192F] transition-all hover:shadow-[8px_8px_0px_0px_#0A192F]">
+          
+          <!-- Pulsing Status Ring Marker -->
+          <div class="w-12 h-12 rounded-2xl bg-brandDark text-brandYellow flex items-center justify-center text-xl flex-shrink-0 relative z-10 border-2 border-brandDark">
+            <span class="absolute inset-0 rounded-2xl bg-brandYellow/30 animate-ping"></span>
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+
+          <!-- Content Space -->
+          <div class="space-y-4 w-full">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h3 class="text-xl font-black font-heading uppercase tracking-wide text-brandDark">The First Corporate Chapter</h3>
+              <span class="inline-flex max-w-fit bg-brandYellow/10 text-brandYellowHover font-sans tracking-widest text-[10px] font-black uppercase px-2.5 py-1 rounded-md border border-brandYellow/30 select-none">Awaiting Ignition 🚀</span>
+            </div>
+            
+            <p class="text-amber-500 text-xs font-bold font-sans tracking-wide uppercase">Full-Stack Engineer / Problem Solver (Open to Roles)</p>
+            
+            <hr class="border-gray-100" />
+            
+            <p class="text-gray-600 text-sm leading-relaxed font-sans">
+              While my commercial career timeline officially reads <strong class="text-brandDark">"Null"</strong> at this exact second, my local dev environment is crowded with running instances of complex projects like <strong class="text-brandDark">DevFlow</strong> and concurrent data scraping engines. 
+            </p>
+
+            <p class="text-gray-600 text-sm leading-relaxed font-sans">
+              Currently sharpening my algorithmic instincts and web infrastructure patterns during my <strong class="text-brandDark">Master of Computer Applications</strong> at <span class="text-brandDark font-medium">IET Lucknow</span>. I am skipped past basic tutorials—my focus is on optimizing page paint frequencies, securing backend parameters, and learning how high-scale tech teams collaborate effectively.
+            </p>
+
+            <!-- Dynamic Highlight Box -->
+            <div class="bg-brandBg border border-gray-200 rounded-2xl p-4 space-y-2 mt-4">
+              <span class="text-brandDark font-heading uppercase font-bold text-xs tracking-wider block">What I Bring to Your Team on Day One:</span>
+              <ul class="text-xs text-gray-500 space-y-1.5 font-sans">
+                <li>⚡ Zero legacy corporate habits to unlearn — pure, unadulterated passion for scalable codebases.</li>
+                <li>🛠️ A robust full-stack foundation anchored in clean JavaScript, TypeScript, React, and automated engines.</li>
+                <li>🧠 Postgrad computer science core knowledge applied straight to structural architecture challenges.</li>
+              </ul>
+            </div>
+
+            <!-- Call-to-action Vector inside Card -->
+            <div class="pt-2">
+              <a href="#contact" class="inline-flex items-center gap-2 text-brandDark hover:text-brandYellowHover text-xs font-bold tracking-widest uppercase font-heading group transition-colors">
+                Let's start Chapter One together <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1 text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-white">
+      <div class="max-w-7xl mx-auto space-y-12">
+        <div class="text-center max-w-2xl mx-auto space-y-3 scroll-reveal">
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight font-heading uppercase text-brandDark">Can't Wait to Hear from You</h2>
+          <p class="text-gray-500 font-sans">I'm always open to new conversations and fresh perspectives. 💬</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-xl lg:max-w-none mx-auto">
+          <div class="lg:col-span-7 bg-brandBg rounded-3xl p-6 sm:p-8 border-2 border-gray-300 shadow-sm space-y-6 scroll-reveal delay-100">
+            <h3 class="text-xl font-bold tracking-tight font-heading uppercase text-brandDark">Whats up?</h3>
+            <form class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-1">
+                  <label class="text-xs font-bold text-gray-600 uppercase tracking-wider font-sans">Name (required)</label>
+                  <input type="text" placeholder="Full name" class="form-input font-sans w-full" />
+                </div>
+                <div class="space-y-1">
+                  <label class="text-xs font-bold text-gray-600 uppercase tracking-wider font-sans">Email (required)</label>
+                  <input type="email" placeholder="Email address" class="form-input font-sans w-full" />
+                </div>
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-gray-600 uppercase tracking-wider font-sans">Subject (required)</label>
+                <input type="text" placeholder="Subject" class="form-input font-sans w-full" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-gray-600 uppercase tracking-wider font-sans">Comment (required)</label>
+                <textarea rows="4" placeholder="Type comment" class="form-input resize-none font-sans w-full"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brandYellow hover:bg-brandYellowHover text-brandDark font-bold py-4 rounded-xl shadow transition font-heading uppercase tracking-widest text-xs">Contact Me</button>
+            </form>
+          </div>
+
+          <div class="lg:col-span-5 bg-brandBg rounded-3xl p-6 sm:p-8 border-2 border-gray-300 shadow-sm space-y-6 scroll-reveal delay-200">
+            <h3 class="text-xl font-bold tracking-tight font-heading uppercase text-brandDark">Get in Touch</h3>
+            <p class="text-gray-500 text-sm leading-relaxed font-sans">If you've got an idea, a question, or just want to say hi, I'd love to hear from you.</p>
+            <div class="space-y-4 pt-2">
+              <div class="flex items-center gap-4">
+                <div class="contact-icon-wrapper border border-gray-300 flex-shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                <span class="font-bold text-sm font-sans">Lucknow, Uttar Pradesh, India</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="contact-icon-wrapper border border-gray-300 flex-shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                <span class="font-bold text-sm font-sans break-all">aryantiwari8954@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-brandDark text-white py-8 px-6 text-center text-xs space-y-4">
+      <div class="flex items-center justify-center gap-4 text-base opacity-75">
+        <a href="https://github.com/aryantiwari009" class="hover:text-brandYellow"><i class="fa-brands fa-github fa-beat"></i></a>
+        <a href="https://www.linkedin.com/in/aryan-tiwari-446158383/" class="hover:text-brandYellow"><i class="fa-brands fa-linkedin-in fa-beat"></i></a>
+      </div>
+      <p class="opacity-60 font-sans">Made with ❤️ and lots of ☕ | © 2026</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
