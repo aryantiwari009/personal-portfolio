@@ -32,6 +32,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-brandBg text-brandDark antialiased font-sans">
+
+    <div id="success-banner" class="hidden fixed top-0 inset-x-0 z-[200] bg-emerald-500 text-white shadow-md transition-all duration-500 transform -translate-y-full">
+      <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between font-sans text-sm font-bold tracking-wide">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-base animate-bounce"></i>
+          <span>Awesome! Your message has been sent successfully. I'll get back to you soon! 😎</span>
+        </div>
+        <button id="close-banner-btn" class="text-white/80 hover:text-white text-lg focus:outline-none p-1 transition-colors" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+    
     <header
       class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
     >
