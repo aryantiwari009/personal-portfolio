@@ -1,18 +1,15 @@
 export default async function handler(req, res) {
-  // 1. Enforce strict POST validation parameters
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  // 2. Fetch the secret token safely from Vercel's environment manager
   const FORMSPREE_TOKEN = process.env.FORMSPREE_TOKEN;
 
   if (!FORMSPREE_TOKEN) {
-    return res.status(500).json({ error: 'Server configuration error: Token missing from environment panel.' });
+    return res.status(500).json({ error: 'Server configuration error: Token missing.' });
   }
 
   try {
-    // 3. Securely forward the client payloads to Formspree
     const response = await fetch(`https://formspree.io/f/${FORMSPREE_TOKEN}`, {
       method: 'POST',
       headers: { 
@@ -23,10 +20,10 @@ export default async function handler(req, res) {
     });
 
     if (response.ok) {
-      // Smoothly redirect back to your live portfolio home with a success query string parameter
-      return res.redirect(303, '/#contact?success=true');
+      // FIXED: Send clean JSON data responses back instead of reloading the page
+      return res.status(200).json({ success: true });
     } else {
-      return res.redirect(303, '/#contact?error=true');
+      return res.status(response.status).json({ error: 'Formspree transmission failed.' });
     }
   } catch (error) {
     return res.status(500).json({ error: 'Internal Server Error' });

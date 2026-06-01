@@ -331,41 +331,71 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-  // --- DYNAMIC CONTACT SUCCESS BANNER HANDLER ---
+// --- ASYNCHRONOUS SECURE FORM HANDLING & SUCCESS BANNER MATRIX ---
+  const contactForm = document.getElementById('contact-form');
   const successBanner = document.getElementById('success-banner');
   const closeBannerBtn = document.getElementById('close-banner-btn');
 
-  if (successBanner && closeBannerBtn) {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Check if the URL contains the success flag redirected from the backend proxy
-    if (urlParams.get('success') === 'true') {
-      successBanner.classList.remove('hidden');
-      
-      setTimeout(() => {
-        successBanner.classList.remove('-translate-y-full');
-      }, 100);
+  // 1. Core animation controllers
+  function showBanner() {
+    if (!successBanner) return;
+    successBanner.classList.remove('hidden');
+    setTimeout(() => {
+      successBanner.classList.remove('-translate-y-full');
+    }, 50);
 
-      // Clean up the address bar URL string so '?success=true' is hidden visually
-      const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
-      window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+    // Auto hide the alert banner after 7 seconds
+    setTimeout(() => {
+      closeBanner();
+    }, 7000);
+  }
 
-      // Automatic slide-up hide timer after 7 seconds
-      const autoHideTimer = setTimeout(() => {
-        closeBanner();
-      }, 7000);
+  function closeBanner() {
+    if (!successBanner) return;
+    successBanner.classList.add('-translate-y-full');
+    setTimeout(() => {
+      successBanner.classList.add('hidden');
+    }, 500);
+  }
 
-      closeBannerBtn.addEventListener('click', () => {
-        clearTimeout(autoHideTimer);
-        closeBanner();
-      });
-    }
+  if (closeBannerBtn) {
+    closeBannerBtn.addEventListener('click', closeBanner);
+  }
 
-    // FIXED: Added classList here so the banner animations execute smoothly
-    function closeBanner() {
-      successBanner.classList.add('-translate-y-full');
-      setTimeout(() => {
-        successBanner.classList.add('hidden');
-      }, 500);
-    }
+  // 2. Form submission interception routine
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault(); // STOPS the aggressive browser page refresh cleanly
+
+      // Extract current data payloads from the input frames
+      const formData = new FormData(contactForm);
+      const payload = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+      };
+
+      try {
+        // Post data payloads silently to your Vercel secure cloud proxy route
+        const response = await fetch('/api/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          showBanner();        // Fires your beautiful drop-down banner instantly!
+          contactForm.reset(); // Cleans out the input text fields gracefully
+        } else {
+          alert('Oops! Something went wrong behind the scenes. Please try again.');
+        }
+      } catch (error) {
+        console.error('Submission pipeline error:', error);
+        alert('Network connection breakdown. Please check your data signal.');
+      }
+    });
   }
