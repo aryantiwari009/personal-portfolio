@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  // 2. Fetch the secret token safely from Vercel's isolated environment manager
+  // 2. Fetch the secret token safely from Vercel's environment manager
   const FORMSPREE_TOKEN = process.env.FORMSPREE_TOKEN;
 
   if (!FORMSPREE_TOKEN) {
@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 3. Securely forward the client payloads to Formspree away from public eyes
+    // 3. Securely forward the client payloads to Formspree
     const response = await fetch(`https://formspree.io/f/${FORMSPREE_TOKEN}`, {
       method: 'POST',
       headers: { 
