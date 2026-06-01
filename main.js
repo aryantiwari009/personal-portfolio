@@ -330,7 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log("Portfolio workspace assets connected smoothly.");
 });
 
-// --- DYNAMIC CONTACT SUCCESS BANNER HANDLER ---
+
+  // --- DYNAMIC CONTACT SUCCESS BANNER HANDLER ---
   const successBanner = document.getElementById('success-banner');
   const closeBannerBtn = document.getElementById('close-banner-btn');
 
@@ -360,10 +361,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // FIXED: Added classList here so the banner animations execute smoothly
     function closeBanner() {
-      successBanner.add('-translate-y-full');
+      successBanner.classList.add('-translate-y-full');
       setTimeout(() => {
-        successBanner.add('hidden');
+        successBanner.classList.add('hidden');
       }, 500);
     }
   }
