@@ -329,3 +329,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log("Portfolio workspace assets connected smoothly.");
 });
+
+// --- DYNAMIC CONTACT SUCCESS BANNER HANDLER ---
+  const successBanner = document.getElementById('success-banner');
+  const closeBannerBtn = document.getElementById('close-banner-btn');
+
+  if (successBanner && closeBannerBtn) {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Check if the URL contains the success flag redirected from the backend proxy
+    if (urlParams.get('success') === 'true') {
+      successBanner.classList.remove('hidden');
+      
+      setTimeout(() => {
+        successBanner.classList.remove('-translate-y-full');
+      }, 100);
+
+      // Clean up the address bar URL string so '?success=true' is hidden visually
+      const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
+      window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+
+      // Automatic slide-up hide timer after 7 seconds
+      const autoHideTimer = setTimeout(() => {
+        closeBanner();
+      }, 7000);
+
+      closeBannerBtn.addEventListener('click', () => {
+        clearTimeout(autoHideTimer);
+        closeBanner();
+      });
+    }
+
+    function closeBanner() {
+      successBanner.add('-translate-y-full');
+      setTimeout(() => {
+        successBanner.add('hidden');
+      }, 500);
+    }
+  }
